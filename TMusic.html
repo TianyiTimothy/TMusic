@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
   <title>vue index</title>
@@ -18,10 +18,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/TMusic.css">
+  <link rel="stylesheet" href="css/TMusic.css">
 </head>
 
-<body style="overflow-x: hidden; overflow-y: scroll;">
+<body id="body">
 
   <div id="app">
     <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -33,11 +33,11 @@
         </button>
         <div class="collapse navbar-collapse form-inline" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Play Random Song</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Play Random Hiphop</a>
+              <a class="nav-link" href="#" @click="randomTopHiphop">Random Top Hiphop (CN)</a>
             </li>
           </ul>
           <input class="form-control mr-sm-2" type="text" :placeholder="defaultSearchSuggestion" aria-label="Search"
@@ -53,21 +53,23 @@
 
 
       </div>
-      <div class="col-sm-6">
+      <div class="center col-sm-6">
         <!-- center area -->
-
+        <div class="center__imgwrapper">
+          <img :src="songCoverUrl" class="rounded mx-auto d-block">
+        </div>
 
 
       </div>
       <div class="col-sm-3">
         <ul class="list-group">
           <span class="list-group-item" v-for="(song, songIndex) in playList">
-            <a href="#" @click="songClick(song.id)">
+            <a href="#" @click="songClick(song.id, songIndex)">
               {{song.name}}
             </a>-
-             <span v-for="(artist, artistIndex) in song.artists"><span v-show="artistIndex>0"> |
-          <!-- todo 搜索歌手 -->
-              </span><a href="#">{{artist.name}}</a></span>
+            <span v-for="(artist, artistIndex) in song.artists"><span v-show="artistIndex>0"> |
+                <!-- todo 搜索歌手: 用同级的artist.id -->
+              </span><a href="#" @click="artistClick(artist.name)">{{artist.name}}</a></span>
           </span>
         </ul>
       </div>
