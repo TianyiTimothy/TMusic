@@ -2,6 +2,10 @@
 
 [Let us go to the convenienTMusic Website](https://tianyitimothy.github.io/vue-music.html) 
 
+## Before Usage
+
+The API is just for learning, please do not use this project for business. Please respect copyright.
+
 ## Built With
 
 - [AutumnFish Music API](<https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi>) - Where music comes from
