@@ -12,11 +12,14 @@
 [v-cloak]{
   display: none;
 }
-.center__imgwrapper{
+.center__imgwrapper,.center__videowrapper{
   width: 100%;
 }
-.center__imgwrapper img{
+.center__imgwrapper .center__videowrapper_img{
   width: 100%;
   height: 100%;
   background-size: cover;
+}
+.center__videowrapper .center__videowrapper_video{
+
 }
