@@ -1,6 +1,6 @@
 # TMusic 0.0.0
 
-[Let us go to the convenienTMusic Website](https://tianyitimothy.github.io/vue-music.html) 
+[Let us go to the convenienTMusic Website](https://tianyi.codes/TMusic/) 
 
 ## Before Usage
 
